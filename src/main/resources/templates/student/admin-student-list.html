@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+
+ <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+</head>
+	
+<body>
+<h3>Add Student</h3>
+<a th:href="@{/showFormForAdd}"
+	class= "btn btn-primary btn-sm">Add Name</a>
+<hr>
+<table>
+	<thead>
+		<tr>
+			<th>Sl/No.</th>
+			<th>Roll No.</th>
+			<th>Class </th>
+			<th>Name </th>
+			<th>Address </th>
+			<th>Phone </th>
+			<th>Parent </th>
+			
+			<th>Action</th>
+		</tr>
+	</thead>
+			
+	<tbody>
+		<tr th:each="tempStudent : ${studentEntity}">
+		
+			<td th:text="${tempStudent.id}"  />
+			<td th:text="${tempStudent.rollNo}"  />
+			<td th:text="${tempStudent.standard}"  />
+			<td th:text="${tempStudent.name}"  />
+			<td th:text="${tempStudent.address}"  />
+			<td th:text="${tempStudent.phone}"  />
+			<td th:text="${tempStudent.parent}"  />
+			
+			<td>
+				<form action="#" th:action="@{/showFormForUpdate}" method="POST">
+					<input type="hidden" name="studentId" th:value="${tempStudent.id}" />						
+					<button type="submit" class="btn btn-secondary btn-sm" >Update</button>
+				
+				</form>
+				</td>
+		</tr>
+	</tbody>
+	
+</table> 
+
+	</body>
+</html>
+
+
+

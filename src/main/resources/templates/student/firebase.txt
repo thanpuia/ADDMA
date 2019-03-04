@@ -1,0 +1,13 @@
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBUY6TYufI5NF7BQGfsvZBi5sDq9xNH_0E",
+    authDomain: "easeofdoingbusiness-903e9.firebaseapp.com",
+    databaseURL: "https://easeofdoingbusiness-903e9.firebaseio.com",
+    projectId: "easeofdoingbusiness-903e9",
+    storageBucket: "easeofdoingbusiness-903e9.appspot.com",
+    messagingSenderId: "1095651642757"
+  };
+  firebase.initializeApp(config);
+</script>
